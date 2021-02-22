@@ -1,0 +1,976 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLegal 14000 8500
+encoding utf-8
+Sheet 1 1
+Title "S-Band Controller, v1"
+Date "2020-12-17"
+Rev "-"
+Comp "Virginia Tech Ground Station"
+Comment1 ""
+Comment2 "creativecommons.org/licenses/by/4.0/"
+Comment3 "License: CC BY 4.0"
+Comment4 "Author: Zach Leffke, KJ4QLP"
+$EndDescr
+$Comp
+L Device:R_US R1
+U 1 1 5FDB02D4
+P 6850 1550
+F 0 "R1" H 6918 1596 50  0000 L CNN
+F 1 "10k" H 6918 1505 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 6890 1540 50  0001 C CNN
+F 3 "~" H 6850 1550 50  0001 C CNN
+	1    6850 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5FDB0D53
+P 8000 2800
+F 0 "C1" H 8115 2846 50  0000 L CNN
+F 1 "0.001uF" H 8115 2755 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 8038 2650 50  0001 C CNN
+F 3 "~" H 8000 2800 50  0001 C CNN
+	1    8000 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Transistors-Bipolar-BJT-Single:MMBTA06LT1G Q2
+U 1 1 5FDB1B2D
+P 7450 2150
+F 0 "Q2" H 7638 2203 60  0000 L CNN
+F 1 "MMBTA06LT1G" H 7638 2097 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 7650 2350 60  0001 L CNN
+F 3 "http://www.onsemi.com/pub/Collateral/MMBTA05LT1-D.PDF" H 7650 2450 60  0001 L CNN
+F 4 "MMBTA06LT1GOSCT-ND" H 7650 2550 60  0001 L CNN "Digi-Key_PN"
+F 5 "MMBTA06LT1G" H 7650 2650 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 7650 2750 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 7650 2850 60  0001 L CNN "Family"
+F 8 "http://www.onsemi.com/pub/Collateral/MMBTA05LT1-D.PDF" H 7650 2950 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/MMBTA06LT1G/MMBTA06LT1GOSCT-ND/1139832" H 7650 3050 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 80V 0.5A SOT23" H 7650 3150 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 7650 3250 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 7650 3350 60  0001 L CNN "Status"
+	1    7450 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:FQP27P06 Q1
+U 1 1 5FDB5982
+P 7550 1450
+F 0 "Q1" V 7892 1450 50  0000 C CNN
+F 1 "FQP27P06" V 7801 1450 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7750 1375 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/FQP27P06-D.PDF" H 7550 1450 50  0001 L CNN
+	1    7550 1450
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 5FDB8C5F
+P 6850 1950
+F 0 "R2" H 6918 1996 50  0000 L CNN
+F 1 "6k" H 6918 1905 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 6890 1940 50  0001 C CNN
+F 3 "~" H 6850 1950 50  0001 C CNN
+	1    6850 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R3
+U 1 1 5FDBAA98
+P 6850 2350
+F 0 "R3" H 6918 2396 50  0000 L CNN
+F 1 "2k" H 6918 2305 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 6890 2340 50  0001 C CNN
+F 3 "~" H 6850 2350 50  0001 C CNN
+	1    6850 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R4
+U 1 1 5FDBBE69
+P 7150 1500
+F 0 "R4" H 7218 1546 50  0000 L CNN
+F 1 "10k" H 7218 1455 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 7190 1490 50  0001 C CNN
+F 3 "~" H 7150 1500 50  0001 C CNN
+	1    7150 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAS16W D1
+U 1 1 5FDBC4F8
+P 6600 1750
+F 0 "D1" H 6600 1967 50  0000 C CNN
+F 1 "BAS16W" H 6600 1876 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 6600 1575 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAS16_SER.pdf" H 6600 1750 50  0001 C CNN
+	1    6600 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R5
+U 1 1 5FDBD236
+P 7550 1800
+F 0 "R5" H 7618 1846 50  0000 L CNN
+F 1 "13k" H 7618 1755 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 7590 1790 50  0001 C CNN
+F 3 "~" H 7550 1800 50  0001 C CNN
+	1    7550 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 1650 7150 1650
+Connection ~ 7550 1650
+Wire Wire Line
+	7350 1350 7150 1350
+Wire Wire Line
+	7150 1350 6850 1350
+Connection ~ 7150 1350
+$Comp
+L power:GND #PWR01
+U 1 1 5FDC0D2F
+P 6850 2600
+F 0 "#PWR01" H 6850 2350 50  0001 C CNN
+F 1 "GND" H 6855 2427 50  0000 C CNN
+F 2 "" H 6850 2600 50  0001 C CNN
+F 3 "" H 6850 2600 50  0001 C CNN
+	1    6850 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 1700 6850 1750
+Wire Wire Line
+	6850 1400 6850 1350
+Wire Wire Line
+	6850 2100 6850 2150
+Wire Wire Line
+	7250 2150 6850 2150
+Connection ~ 6850 2150
+Wire Wire Line
+	6850 2150 6850 2200
+Wire Wire Line
+	6750 1750 6850 1750
+Connection ~ 6850 1750
+Wire Wire Line
+	6850 1750 6850 1800
+$Comp
+L Device:R_US R6
+U 1 1 5FDC214F
+P 6200 2000
+F 0 "R6" H 6268 2046 50  0000 L CNN
+F 1 "20k" H 6268 1955 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 6240 1990 50  0001 C CNN
+F 3 "~" H 6200 2000 50  0001 C CNN
+	1    6200 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R7
+U 1 1 5FDC2C94
+P 6200 2400
+F 0 "R7" H 6268 2446 50  0000 L CNN
+F 1 "2.5k" H 6268 2355 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 6240 2390 50  0001 C CNN
+F 3 "~" H 6200 2400 50  0001 C CNN
+	1    6200 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 2600 6850 2550
+Wire Wire Line
+	6850 2550 6200 2550
+Connection ~ 6850 2550
+Wire Wire Line
+	6850 2550 6850 2500
+Wire Wire Line
+	6200 2250 6200 2200
+Wire Wire Line
+	6200 1850 6200 1350
+Wire Wire Line
+	6200 1350 6850 1350
+Connection ~ 6850 1350
+Wire Wire Line
+	6200 2200 6050 2200
+Wire Wire Line
+	6050 2200 6050 2850
+Wire Wire Line
+	6050 2850 7550 2850
+Wire Wire Line
+	7550 2850 7550 2600
+Connection ~ 6200 2200
+Wire Wire Line
+	6200 2200 6200 2150
+$Comp
+L Diode:BAS16W D2
+U 1 1 5FDC4BC5
+P 7800 2600
+F 0 "D2" H 7800 2383 50  0000 C CNN
+F 1 "BAS16W" H 7800 2474 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 7800 2425 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAS16_SER.pdf" H 7800 2600 50  0001 C CNN
+	1    7800 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5FDC5F8B
+P 8000 2950
+F 0 "#PWR02" H 8000 2700 50  0001 C CNN
+F 1 "GND" H 8005 2777 50  0000 C CNN
+F 2 "" H 8000 2950 50  0001 C CNN
+F 3 "" H 8000 2950 50  0001 C CNN
+	1    8000 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2600 7550 2600
+Connection ~ 7550 2600
+Wire Wire Line
+	7550 2600 7550 2350
+Wire Wire Line
+	7950 2600 8000 2600
+Wire Wire Line
+	8000 2600 8000 2650
+Wire Wire Line
+	8000 2600 8350 2600
+Connection ~ 8000 2600
+$Comp
+L power:+28V #PWR03
+U 1 1 5FDC7663
+P 4800 2000
+F 0 "#PWR03" H 4800 1850 50  0001 C CNN
+F 1 "+28V" H 4815 2173 50  0000 C CNN
+F 2 "" H 5050 2050 50  0001 C CNN
+F 3 "" H 5050 2050 50  0001 C CNN
+	1    4800 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 1350 6000 1350
+Wire Wire Line
+	6000 1350 6000 1250
+Connection ~ 6200 1350
+Wire Wire Line
+	7750 1350 8350 1350
+Text GLabel 8350 1350 2    50   Input ~ 0
+LNA_RHCP_RX
+$Comp
+L Analog_ADC:ADS1115IDGS U1
+U 1 1 5FDC901B
+P 3450 5750
+F 0 "U1" H 3450 6431 50  0000 C CNN
+F 1 "ADS1115IDGS" H 3450 6340 50  0000 C CNN
+F 2 "Package_SO:TSSOP-10_3x3mm_P0.5mm" H 3450 5250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ads1113.pdf" H 3400 4850 50  0001 C CNN
+	1    3450 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Embedded-Microcontrollers:ATSAMD21G18A-AUT U2
+U 1 1 5FDCD0CE
+P 10800 4500
+F 0 "U2" H 10500 6050 60  0000 C CNN
+F 1 "ATSAMD21G18A-AUT" V 10800 4500 60  0000 C CNN
+F 2 "digikey-footprints:TQFP-48_7x7mm" H 11000 4700 60  0001 L CNN
+F 3 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en605782" H 11000 4800 60  0001 L CNN
+F 4 "ATSAMD21G18A-AUTCT-ND" H 11000 4900 60  0001 L CNN "Digi-Key_PN"
+F 5 "ATSAMD21G18A-AUT" H 11000 5000 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 11000 5100 60  0001 L CNN "Category"
+F 7 "Embedded - Microcontrollers" H 11000 5200 60  0001 L CNN "Family"
+F 8 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en605782" H 11000 5300 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/microchip-technology/ATSAMD21G18A-AUT/ATSAMD21G18A-AUTCT-ND/4878879" H 11000 5400 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC MCU 32BIT 256KB FLASH 48TQFP" H 11000 5500 60  0001 L CNN "Description"
+F 11 "Microchip Technology" H 11000 5600 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 11000 5700 60  0001 L CNN "Status"
+	1    10800 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor:INA260 U3
+U 1 1 5FDD1396
+P 3850 2400
+F 0 "U3" V 3800 2450 50  0000 R CNN
+F 1 "INA260" V 3900 2550 50  0000 R CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 3850 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ina260.pdf" H 3850 2300 50  0001 C CNN
+	1    3850 2400
+	0    -1   1    0   
+$EndComp
+$Comp
+L Sensor_Temperature:MCP9700T-ELT U4
+U 1 1 5FDD768D
+P 2900 3150
+F 0 "U4" H 2571 3196 50  0000 R CNN
+F 1 "MCP9700T-ELT" H 2571 3105 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-353_SC-70-5" H 2900 2750 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21942e.pdf" H 2900 3150 50  0001 C CNN
+	1    2900 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5FDED598
+P 11150 1500
+F 0 "J1" H 11207 1967 50  0000 C CNN
+F 1 "USB_B_Micro" H 11207 1876 50  0000 C CNN
+F 2 "" H 11300 1450 50  0001 C CNN
+F 3 "~" H 11300 1450 50  0001 C CNN
+	1    11150 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11300 4700 11500 4700
+Wire Wire Line
+	11300 4800 11500 4800
+Text Label 11500 4700 0    39   ~ 0
+D+
+Text Label 11500 4800 0    39   ~ 0
+D-
+Wire Wire Line
+	11300 4900 11500 4900
+Wire Wire Line
+	11300 5000 11500 5000
+Text Label 11500 5000 0    39   ~ 0
+SDA
+Text Label 11500 4900 0    39   ~ 0
+SCL
+Wire Wire Line
+	10300 5650 10100 5650
+Text Label 10100 5650 2    39   ~ 0
+~RESET
+$Comp
+L Device:Crystal Y1
+U 1 1 5FDF4BD7
+P 10000 3400
+F 0 "Y1" H 10000 3668 50  0000 C CNN
+F 1 "Crystal" H 10000 3577 50  0000 C CNN
+F 2 "" H 10000 3400 50  0001 C CNN
+F 3 "~" H 10000 3400 50  0001 C CNN
+	1    10000 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5FDF54B8
+P 9750 3050
+F 0 "C2" H 9635 3096 50  0000 R CNN
+F 1 "22pF" H 9635 3005 50  0000 R CNN
+F 2 "digikey-footprints:0805" H 9788 2900 50  0001 C CNN
+F 3 "~" H 9750 3050 50  0001 C CNN
+	1    9750 3050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5FDF6040
+P 10150 3050
+F 0 "C3" H 10265 3096 50  0000 L CNN
+F 1 "22pF" H 10265 3005 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 10188 2900 50  0001 C CNN
+F 3 "~" H 10150 3050 50  0001 C CNN
+	1    10150 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 3400 10150 3400
+Wire Wire Line
+	10300 3500 9850 3500
+Wire Wire Line
+	9850 3500 9850 3400
+Wire Wire Line
+	9850 3400 9850 3200
+Wire Wire Line
+	9850 3200 9750 3200
+Connection ~ 9850 3400
+Wire Wire Line
+	10150 3400 10150 3200
+Connection ~ 10150 3400
+$Comp
+L power:GND #PWR04
+U 1 1 5FDF92E3
+P 9750 2900
+F 0 "#PWR04" H 9750 2650 50  0001 C CNN
+F 1 "GND" H 9755 2727 50  0000 C CNN
+F 2 "" H 9750 2900 50  0001 C CNN
+F 3 "" H 9750 2900 50  0001 C CNN
+	1    9750 2900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5FDF9B0F
+P 10150 2900
+F 0 "#PWR05" H 10150 2650 50  0001 C CNN
+F 1 "GND" H 10155 2727 50  0000 C CNN
+F 2 "" H 10150 2900 50  0001 C CNN
+F 3 "" H 10150 2900 50  0001 C CNN
+	1    10150 2900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FDFC26E
+P 10700 2750
+F 0 "#PWR?" H 10700 2600 50  0001 C CNN
+F 1 "+3.3V" H 10715 2923 50  0000 C CNN
+F 2 "" H 10700 2750 50  0001 C CNN
+F 3 "" H 10700 2750 50  0001 C CNN
+	1    10700 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11100 2900 11000 2900
+Wire Wire Line
+	11000 2900 10900 2900
+Connection ~ 11000 2900
+Wire Wire Line
+	10900 2900 10800 2900
+Connection ~ 10900 2900
+Wire Wire Line
+	10800 2900 10700 2900
+Connection ~ 10800 2900
+Wire Wire Line
+	10700 2900 10700 2750
+Connection ~ 10700 2900
+$Comp
+L power:GND #PWR?
+U 1 1 5FE0028A
+P 11100 5950
+F 0 "#PWR?" H 11100 5700 50  0001 C CNN
+F 1 "GND" H 11105 5777 50  0000 C CNN
+F 2 "" H 11100 5950 50  0001 C CNN
+F 3 "" H 11100 5950 50  0001 C CNN
+	1    11100 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10800 5900 10900 5900
+Wire Wire Line
+	11000 5900 11100 5900
+Wire Wire Line
+	11000 5900 10900 5900
+Connection ~ 11000 5900
+Connection ~ 10900 5900
+Wire Wire Line
+	11100 5900 11100 5950
+Connection ~ 11100 5900
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP?
+U 1 1 5FE075C4
+P 3750 1750
+F 0 "JP?" H 3750 1955 50  0000 C CNN
+F 1 "VBUS" H 3750 1864 50  0000 C CNN
+F 2 "" H 3750 1750 50  0001 C CNN
+F 3 "~" H 3750 1750 50  0001 C CNN
+	1    3750 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FE08EC5
+P 4300 2450
+F 0 "#PWR?" H 4300 2200 50  0001 C CNN
+F 1 "GND" H 4305 2277 50  0000 C CNN
+F 2 "" H 4300 2450 50  0001 C CNN
+F 3 "" H 4300 2450 50  0001 C CNN
+	1    4300 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FE0981B
+P 3350 2300
+F 0 "#PWR?" H 3350 2150 50  0001 C CNN
+F 1 "+3.3V" H 3365 2473 50  0000 C CNN
+F 2 "" H 3350 2300 50  0001 C CNN
+F 3 "" H 3350 2300 50  0001 C CNN
+	1    3350 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2400 4300 2400
+Wire Wire Line
+	4300 2400 4300 2450
+Wire Wire Line
+	3450 2400 3350 2400
+Wire Wire Line
+	3350 2400 3350 2300
+Wire Wire Line
+	3750 2000 3750 1900
+Wire Wire Line
+	3650 2000 3550 2000
+Wire Wire Line
+	3550 1750 3550 2000
+Connection ~ 3550 2000
+Wire Wire Line
+	3550 2000 2650 2000
+Wire Wire Line
+	3950 1750 4050 1750
+Wire Wire Line
+	4050 1750 4050 2000
+Wire Wire Line
+	4050 2000 4800 2000
+Connection ~ 4050 2000
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 5FE19161
+P 4100 3000
+F 0 "JP?" H 4000 2900 50  0000 C CNN
+F 1 "A0" H 4000 2950 50  0000 C CNN
+F 2 "" H 4100 3000 50  0001 C CNN
+F 3 "~" H 4100 3000 50  0001 C CNN
+	1    4100 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 5FE1B1C2
+P 4100 3200
+F 0 "JP?" H 4000 3100 50  0000 C CNN
+F 1 "A0" H 4000 3150 50  0000 C CNN
+F 2 "" H 4100 3200 50  0001 C CNN
+F 3 "~" H 4100 3200 50  0001 C CNN
+	1    4100 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 5FE1B9A6
+P 4100 3400
+F 0 "JP?" H 4000 3300 50  0000 C CNN
+F 1 "A0" H 4000 3350 50  0000 C CNN
+F 2 "" H 4100 3400 50  0001 C CNN
+F 3 "~" H 4100 3400 50  0001 C CNN
+	1    4100 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 5FE1BF51
+P 4100 3600
+F 0 "JP?" H 4000 3500 50  0000 C CNN
+F 1 "A0" H 4000 3550 50  0000 C CNN
+F 2 "" H 4100 3600 50  0001 C CNN
+F 3 "~" H 4100 3600 50  0001 C CNN
+	1    4100 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4250 3000 4350 3000
+Text Label 4350 3000 0    50   ~ 0
+SCL
+Text Label 4350 3200 0    50   ~ 0
+GND
+Text Label 4350 3400 0    50   ~ 0
+SDA
+Text Label 4350 3600 0    50   ~ 0
++3.3V
+Wire Wire Line
+	4350 3200 4250 3200
+Wire Wire Line
+	4250 3400 4350 3400
+Wire Wire Line
+	4350 3600 4250 3600
+Wire Wire Line
+	3950 2800 3950 3000
+Wire Wire Line
+	3950 3000 3950 3200
+Connection ~ 3950 3000
+Wire Wire Line
+	3950 3200 3950 3400
+Connection ~ 3950 3200
+Wire Wire Line
+	3950 3400 3950 3600
+Connection ~ 3950 3400
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 5FE37930
+P 4950 3000
+F 0 "JP?" H 4850 2900 50  0000 C CNN
+F 1 "A1" H 4850 2950 50  0000 C CNN
+F 2 "" H 4950 3000 50  0001 C CNN
+F 3 "~" H 4950 3000 50  0001 C CNN
+	1    4950 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 5FE37936
+P 4950 3200
+F 0 "JP?" H 4850 3100 50  0000 C CNN
+F 1 "A1" H 4850 3150 50  0000 C CNN
+F 2 "" H 4950 3200 50  0001 C CNN
+F 3 "~" H 4950 3200 50  0001 C CNN
+	1    4950 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 5FE3793C
+P 4950 3400
+F 0 "JP?" H 4850 3300 50  0000 C CNN
+F 1 "A1" H 4850 3350 50  0000 C CNN
+F 2 "" H 4950 3400 50  0001 C CNN
+F 3 "~" H 4950 3400 50  0001 C CNN
+	1    4950 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 5FE37942
+P 4950 3600
+F 0 "JP?" H 4850 3500 50  0000 C CNN
+F 1 "A1" H 4850 3550 50  0000 C CNN
+F 2 "" H 4950 3600 50  0001 C CNN
+F 3 "~" H 4950 3600 50  0001 C CNN
+	1    4950 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5100 3000 5200 3000
+Text Label 5200 3000 0    50   ~ 0
+SCL
+Text Label 5200 3200 0    50   ~ 0
+GND
+Text Label 5200 3400 0    50   ~ 0
+SDA
+Text Label 5200 3600 0    50   ~ 0
++3.3V
+Wire Wire Line
+	5200 3200 5100 3200
+Wire Wire Line
+	5100 3400 5200 3400
+Wire Wire Line
+	5200 3600 5100 3600
+Wire Wire Line
+	4800 2800 4800 3000
+Wire Wire Line
+	4800 3000 4800 3200
+Connection ~ 4800 3000
+Wire Wire Line
+	4800 3200 4800 3400
+Connection ~ 4800 3200
+Wire Wire Line
+	4800 3400 4800 3600
+Connection ~ 4800 3400
+Wire Wire Line
+	4050 2800 4800 2800
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FE3CFA9
+P 2900 2850
+F 0 "#PWR?" H 2900 2700 50  0001 C CNN
+F 1 "+3.3V" H 2915 3023 50  0000 C CNN
+F 2 "" H 2900 2850 50  0001 C CNN
+F 3 "" H 2900 2850 50  0001 C CNN
+	1    2900 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FE3D698
+P 2900 3450
+F 0 "#PWR?" H 2900 3200 50  0001 C CNN
+F 1 "GND" H 2905 3277 50  0000 C CNN
+F 2 "" H 2900 3450 50  0001 C CNN
+F 3 "" H 2900 3450 50  0001 C CNN
+	1    2900 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FE3DC9A
+P 3350 3300
+F 0 "C?" H 3465 3346 50  0000 L CNN
+F 1 "0.1uF" H 3465 3255 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 3388 3150 50  0001 C CNN
+F 3 "~" H 3350 3300 50  0001 C CNN
+	1    3350 3300
+	1    0    0    -1  
+$EndComp
+Text GLabel 3050 2000 1    50   Input ~ 0
++28VDC_IN
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 5FE4178B
+P 2550 2000
+F 0 "H?" V 2787 2003 50  0000 C CNN
+F 1 "+28VDC_IN" V 2696 2003 50  0000 C CNN
+F 2 "" H 2550 2000 50  0001 C CNN
+F 3 "~" H 2550 2000 50  0001 C CNN
+	1    2550 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 5FE43075
+P 5100 2000
+F 0 "H?" V 5054 2150 50  0000 L CNN
+F 1 "+28VDC_OUT" V 5145 2150 50  0000 L CNN
+F 2 "" H 5100 2000 50  0001 C CNN
+F 3 "~" H 5100 2000 50  0001 C CNN
+	1    5100 2000
+	0    1    1    0   
+$EndComp
+Connection ~ 4800 2000
+Wire Wire Line
+	4800 2000 5000 2000
+$Comp
+L power:+28V #PWR?
+U 1 1 5FE43C2A
+P 6000 1250
+F 0 "#PWR?" H 6000 1100 50  0001 C CNN
+F 1 "+28V" H 6015 1423 50  0000 C CNN
+F 2 "" H 6250 1300 50  0001 C CNN
+F 3 "" H 6250 1300 50  0001 C CNN
+	1    6000 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5FE4FB43
+P 7300 4350
+F 0 "R?" H 7368 4396 50  0000 L CNN
+F 1 "10k" H 7368 4305 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 7340 4340 50  0001 C CNN
+F 3 "~" H 7300 4350 50  0001 C CNN
+	1    7300 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FE4FB49
+P 8450 5600
+F 0 "C?" H 8565 5646 50  0000 L CNN
+F 1 "0.001uF" H 8565 5555 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 8488 5450 50  0001 C CNN
+F 3 "~" H 8450 5600 50  0001 C CNN
+	1    8450 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Transistors-Bipolar-BJT-Single:MMBTA06LT1G Q?
+U 1 1 5FE4FB58
+P 7900 4950
+F 0 "Q?" H 8088 5003 60  0000 L CNN
+F 1 "MMBTA06LT1G" H 8088 4897 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 8100 5150 60  0001 L CNN
+F 3 "http://www.onsemi.com/pub/Collateral/MMBTA05LT1-D.PDF" H 8100 5250 60  0001 L CNN
+F 4 "MMBTA06LT1GOSCT-ND" H 8100 5350 60  0001 L CNN "Digi-Key_PN"
+F 5 "MMBTA06LT1G" H 8100 5450 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 8100 5550 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 8100 5650 60  0001 L CNN "Family"
+F 8 "http://www.onsemi.com/pub/Collateral/MMBTA05LT1-D.PDF" H 8100 5750 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/MMBTA06LT1G/MMBTA06LT1GOSCT-ND/1139832" H 8100 5850 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 80V 0.5A SOT23" H 8100 5950 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 8100 6050 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 8100 6150 60  0001 L CNN "Status"
+	1    7900 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:FQP27P06 Q?
+U 1 1 5FE4FB5E
+P 8000 4250
+F 0 "Q?" V 8342 4250 50  0000 C CNN
+F 1 "FQP27P06" V 8251 4250 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8200 4175 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/FQP27P06-D.PDF" H 8000 4250 50  0001 L CNN
+	1    8000 4250
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5FE4FB64
+P 7300 4750
+F 0 "R?" H 7368 4796 50  0000 L CNN
+F 1 "6k" H 7368 4705 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 7340 4740 50  0001 C CNN
+F 3 "~" H 7300 4750 50  0001 C CNN
+	1    7300 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5FE4FB6A
+P 7300 5150
+F 0 "R?" H 7368 5196 50  0000 L CNN
+F 1 "2k" H 7368 5105 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 7340 5140 50  0001 C CNN
+F 3 "~" H 7300 5150 50  0001 C CNN
+	1    7300 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5FE4FB70
+P 7600 4300
+F 0 "R?" H 7668 4346 50  0000 L CNN
+F 1 "10k" H 7668 4255 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 7640 4290 50  0001 C CNN
+F 3 "~" H 7600 4300 50  0001 C CNN
+	1    7600 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAS16W D?
+U 1 1 5FE4FB76
+P 7050 4550
+F 0 "D?" H 7050 4767 50  0000 C CNN
+F 1 "BAS16W" H 7050 4676 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 7050 4375 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAS16_SER.pdf" H 7050 4550 50  0001 C CNN
+	1    7050 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5FE4FB7C
+P 8000 4600
+F 0 "R?" H 8068 4646 50  0000 L CNN
+F 1 "13k" H 8068 4555 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 8040 4590 50  0001 C CNN
+F 3 "~" H 8000 4600 50  0001 C CNN
+	1    8000 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4450 7600 4450
+Connection ~ 8000 4450
+Wire Wire Line
+	7800 4150 7600 4150
+Wire Wire Line
+	7600 4150 7300 4150
+Connection ~ 7600 4150
+$Comp
+L power:GND #PWR?
+U 1 1 5FE4FB87
+P 7300 5400
+F 0 "#PWR?" H 7300 5150 50  0001 C CNN
+F 1 "GND" H 7305 5227 50  0000 C CNN
+F 2 "" H 7300 5400 50  0001 C CNN
+F 3 "" H 7300 5400 50  0001 C CNN
+	1    7300 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 4500 7300 4550
+Wire Wire Line
+	7300 4200 7300 4150
+Wire Wire Line
+	7300 4900 7300 4950
+Wire Wire Line
+	7700 4950 7300 4950
+Connection ~ 7300 4950
+Wire Wire Line
+	7300 4950 7300 5000
+Wire Wire Line
+	7200 4550 7300 4550
+Connection ~ 7300 4550
+Wire Wire Line
+	7300 4550 7300 4600
+$Comp
+L Device:R_US R?
+U 1 1 5FE4FB96
+P 6650 4800
+F 0 "R?" H 6718 4846 50  0000 L CNN
+F 1 "20k" H 6718 4755 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 6690 4790 50  0001 C CNN
+F 3 "~" H 6650 4800 50  0001 C CNN
+	1    6650 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5FE4FB9C
+P 6650 5200
+F 0 "R?" H 6718 5246 50  0000 L CNN
+F 1 "2.5k" H 6718 5155 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 6690 5190 50  0001 C CNN
+F 3 "~" H 6650 5200 50  0001 C CNN
+	1    6650 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 5400 7300 5350
+Wire Wire Line
+	7300 5350 6650 5350
+Connection ~ 7300 5350
+Wire Wire Line
+	7300 5350 7300 5300
+Wire Wire Line
+	6650 5050 6650 5000
+Wire Wire Line
+	6650 4650 6650 4150
+Wire Wire Line
+	6650 4150 7300 4150
+Connection ~ 7300 4150
+Wire Wire Line
+	6650 5000 6500 5000
+Wire Wire Line
+	6500 5000 6500 5650
+Wire Wire Line
+	6500 5650 8000 5650
+Wire Wire Line
+	8000 5650 8000 5400
+Connection ~ 6650 5000
+Wire Wire Line
+	6650 5000 6650 4950
+$Comp
+L Diode:BAS16W D?
+U 1 1 5FE4FBB0
+P 8250 5400
+F 0 "D?" H 8250 5183 50  0000 C CNN
+F 1 "BAS16W" H 8250 5274 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 8250 5225 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAS16_SER.pdf" H 8250 5400 50  0001 C CNN
+	1    8250 5400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FE4FBB6
+P 8450 5750
+F 0 "#PWR?" H 8450 5500 50  0001 C CNN
+F 1 "GND" H 8455 5577 50  0000 C CNN
+F 2 "" H 8450 5750 50  0001 C CNN
+F 3 "" H 8450 5750 50  0001 C CNN
+	1    8450 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 5400 8000 5400
+Connection ~ 8000 5400
+Wire Wire Line
+	8000 5400 8000 5150
+Wire Wire Line
+	8400 5400 8450 5400
+Wire Wire Line
+	8450 5400 8450 5450
+Wire Wire Line
+	8450 5400 8800 5400
+Connection ~ 8450 5400
+Wire Wire Line
+	6650 4150 6450 4150
+Wire Wire Line
+	6450 4150 6450 4050
+Connection ~ 6650 4150
+Wire Wire Line
+	8200 4150 8800 4150
+Text GLabel 8800 4150 2    50   Input ~ 0
+PA_PWR
+$Comp
+L power:+28V #PWR?
+U 1 1 5FE4FBC8
+P 6450 4050
+F 0 "#PWR?" H 6450 3900 50  0001 C CNN
+F 1 "+28V" H 6465 4223 50  0000 C CNN
+F 2 "" H 6700 4100 50  0001 C CNN
+F 3 "" H 6700 4100 50  0001 C CNN
+	1    6450 4050
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
